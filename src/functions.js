@@ -38,6 +38,7 @@ const setTitle = (id, text) => {
  * addRow(frameworkData, "data-frameworks");
  */
 
+
 const addRow = (data, idBodyTable) => {
 
     if (
@@ -57,7 +58,7 @@ const addRow = (data, idBodyTable) => {
         <td>${data.usersName}</td>
         <td>${data.popularityPercentage}</td>
     </tr>`;
-
+    
     let refBodyTable = document.getElementById(idBodyTable);
     if (refBodyTable) {
         refBodyTable.insertAdjacentHTML('beforeend', template);
@@ -65,5 +66,6 @@ const addRow = (data, idBodyTable) => {
         console.warn(`No se encontró un elemento con el ID "${idBodyTable}".`);
     }
 }
+
 
 export { setTitle, addRow };
